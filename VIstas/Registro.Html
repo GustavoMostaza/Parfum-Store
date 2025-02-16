@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="w-full max-w-md p-8 space-y-4 bg-white rounded shadow-md">
+   <!-- Registro Formulario -->
+<div id="registerForm" class="space-y-4">
+    <h2 class="text-2xl font-bold text-center">Registro</h2>
+    <input type="text" id="registerUsername" placeholder="Nombre de usuario" class="w-full px-4 py-2 border rounded">
+    <input type="email" id="registerEmail" placeholder="Correo electrónico" class="w-full px-4 py-2 border rounded">
+    <input type="password" id="registerPassword" placeholder="Contraseña" class="w-full px-4 py-2 border rounded">
+    <input type="file" id="registerPhoto" class="w-full px-4 py-2 border rounded">
+    <button onclick="registerUser()" class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-600">Registrar</button>
+</div>
+
+
+        <!-- Login Formulario -->
+        <div id="loginForm" class="space-y-4 hidden">
+            <h2 class="text-2xl font-bold text-center">Login</h2>
+            <input type="text" id="loginUsername" placeholder="Nombre de usuario" class="w-full px-4 py-2 border rounded">
+            <input type="password" id="loginPassword" placeholder="Contraseña" class="w-full px-4 py-2 border rounded">
+            <button onclick="loginUser()" class="w-full px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-600">Iniciar sesión</button>
+        </div>
+
+        <div class="text-center">
+            <button onclick="toggleForms()" class="text-blue-500">¿Ya tienes cuenta? Inicia sesión</button>
+        </div>
+    </div>
+<!-- Perfil de Usuario -->
+<div id="userProfile" class="absolute top-4 right-4 p-4 bg-white shadow rounded hidden">
+    <img id="profilePhoto" src="../Roots/default_profile.jpeg" alt="Foto de perfil" class="w-16 h-16 rounded-full mb-2">
+    <p id="profileUsername" class="font-bold"></p>
+    <p id="profileEmail" class="text-sm text-gray-600"></p>
+</div>
+
+    <script src="../Controladores/Registro.js"></script>
+</body>
+</html>

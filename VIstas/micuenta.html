@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-amber-700 text-white p-4 fixed w-full top-0 left-0 z-10 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="Inicio.html" class="text-2xl font-semibold">Le Perfumeria</a>
+            <div class="space-x-6">
+                <a href="Inicio.html" class="hover:text-yellow-300">Inicio</a>
+                <a href="Productos.html" class="hover:text-yellow-300">Menú</a>
+                <a href="Contacto.html" class="hover:text-yellow-300">Nosotros</a>
+                <a href="Perfil.html" class="hover:text-yellow-300">Perfil</a>
+                <a href="registrofeik.html" class="hover:text-yellow-300">Registro</a>
+                <a href="vistafeik.html" class="hover:text-yellow-300 transition">Perfil</a>
+                <a href="Carrito.html" class="hover:text-yellow-300">Carrito</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section mt-24">
+        <div class="container">
+            <h1 class="title">Mi perfil</h1>
+            <div id="userInfo" class="box">
+                <p>Cargando información del usuario...</p>
+            </div>
+
+            <!-- Formulario de edición de datos del usuario -->
+            <div id="editForm" class="box" style="display:none;">
+                <h2 class="subtitle">Editar información</h2>
+
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input id="username" class="input" type="text">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Correo electrónico</label>
+                    <div class="control">
+                        <input id="email" class="input" type="email">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Foto de perfil (URL)</label>
+                    <div class="control">
+                        <input id="profilePhoto" class="input" type="text">
+                    </div>
+                </div>
+
+                <div class="control">
+                    <button id="saveChanges" class="button is-primary">Guardar cambios</button>
+                </div>
+            </div>
+
+            <button id="editButton" class="button is-info">Editar perfil</button>
+        </div>
+    </section>
+
+    <script src="../Controladores/dos.js"></script>
+</body>
+</html>

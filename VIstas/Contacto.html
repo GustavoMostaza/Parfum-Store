@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Página Perfumera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Personalización adicional para el estilo */
+        .hero-section {
+            position: relative;
+            background: url('../Media/R.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+        /* Capa oscura para mejorar la legibilidad del texto sobre la imagen */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Sombra oscura */
+        }
+        .about-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+        .about-text {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .about-text h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .about-text p {
+            font-size: 18px;
+            color: #555;
+        }
+        .about-text .btn-primary {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Barra de navegación -->
+    <nav class="bg-amber-700 text-white p-4 fixed w-full top-0 left-0 z-10 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="Inicio.html" class="text-2xl font-semibold">Le Perfumeria</a>
+            <div class="space-x-6">
+                <a href="../Vistas/Inicio.html" class="hover:text-yellow-300">Inicio</a>
+                <a href="../Vistas/Productos.html" class="hover:text-yellow-300">Menú</a>
+                <a href="Registro.Html" class="hover:text-yellow-300">Registro</a>
+                <a href="Contacto.html" class="hover:text-yellow-300 transition">Nosotros</a>
+
+                <a href="vistafeik.html" class="hover:text-yellow-300 transition" >Perfil</a>
+                <a href="Carrito.html" class="hover:text-yellow-300">Carrito</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero-section text-center">
+        <div class="hero-overlay"></div> <!-- Capa oscura para mejorar contraste -->
+        <div class="container position-relative z-1">
+            <h1 class="display-4">Bienvenidos a nuestra página perfumera</h1>
+            <p class="lead">Descubre el arte de los perfumes exclusivos para ti</p>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-text">
+                <h2>¿Quiénes somos?</h2>
+                <p>En nuestra página perfumera, nos dedicamos a ofrecerte una experiencia única en el mundo de los perfumes. Trabajamos con las mejores marcas y creadores de fragancias, para que encuentres esa esencia que te representa. Ya sea para ti o para regalar, tenemos la fragancia perfecta para cada ocasión.</p>
+                <p>Creemos que el perfume es más que una fragancia; es una expresión personal, un toque de elegancia que te acompaña durante todo el día.</p>
+                <a href="productos.html" class="btn btn-primary btn-lg">Explora nuestros productos</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

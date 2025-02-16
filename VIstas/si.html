@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Barra de navegación -->
+    <nav class="bg-amber-700 text-white p-4 fixed w-full top-0 left-0 z-10 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="Inicio.html" class="text-2xl font-semibold">Le Perfumeria</a>
+            <div class="space-x-6">
+                <a href="Inicio.html" class="hover:text-yellow-300">Inicio</a>
+                <a href="Productos.html" class="hover:text-yellow-300">Menú</a>
+                <a href="Registro.html" class="hover:text-yellow-300">Registro</a>
+                <a href="Contacto.html" class="hover:text-yellow-300 transition">Nosotros</a>
+                <a href="vistafeik.html" class="hover:text-yellow-300 transition">Perfil</a>
+                <a href="Carrito.html" class="hover:text-yellow-300">Carrito</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-4 text-primary">Lista de Compras</h1>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-primary">
+                    <tr>
+                        <th>ID</th>
+                        <th>User ID</th>
+                        <th>Fecha de Compra</th>
+                        <th>Nombre del Titular</th>
+                        <th>Número de Tarjeta</th>
+                        <th>Fecha de Expiración</th>
+                        <th>CVV</th>
+                    </tr>
+                </thead>
+                <tbody id="comprasTable">
+                    <!-- Las filas se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Botón para generar PDF -->
+        <div class="text-center mt-4">
+            <button id="generatePdf" class="btn btn-success">Generar PDF</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!-- jsPDF-AutoTable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <!-- Script personalizado -->
+    <script>
+        // Cargar los datos de la API
+        fetch('http://localhost/Apis/vercompras.php')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error en la solicitud: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Agregar datos a la tabla
+                let comprasTable = document.getElementById('comprasTable');
+                data.forEach(compra => {
+                    let row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${compra.id}</td>
+                        <td>${compra.user_id}</td>
+                        <td>${compra.fecha_compra}</td>
+                        <td>${compra.nombre_titular}</td>
+                        <td>${compra.numero_tarjeta}</td>
+                        <td>${compra.fecha_expiracion}</td>
+                        <td>${compra.cvv}</td>
+                    `;
+                    comprasTable.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error al cargar las compras:', error));
+
+        // Generar PDF usando jsPDF y AutoTable
+        document.getElementById('generatePdf').addEventListener('click', async () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Título del PDF
+            doc.setFontSize(18);
+            doc.text('Lista de Compras', 10, 10);
+
+            // Obtener la tabla HTML
+            const tableElement = document.querySelector('.table');
+
+            // Generar PDF desde la tabla
+            doc.autoTable({
+                html: tableElement,
+                startY: 20, // Margen superior
+                theme: 'striped', // Tema de la tabla
+                headStyles: { fillColor: [41, 128, 185] }, // Color del encabezado
+            });
+
+            // Descargar PDF
+            doc.save('lista_compras.pdf');
+        });
+    </script>
+</body>
+</html>

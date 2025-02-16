@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../Roots/vistafeik.css">
+</head>
+<body>
+    <nav class="bg-amber-700 text-white p-4 fixed w-full top-0 left-0 z-10 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="Inicio.html" class="text-2xl font-semibold">Le Perfumeria</a>
+            <div class="space-x-6">
+                <a href="../Vistas/Inicio.html" class="hover:text-yellow-300">Inicio</a>
+                <a href="../Vistas/Productos.html" class="hover:text-yellow-300">Menú</a>
+                <a href="registrofeik.html" class="hover:text-yellow-300">Registro</a>
+                <a href="Contacto.html" class="hover:text-yellow-300 transition">Nosotros</a>
+                <a href="vistafeik.html" class="hover:text-yellow-300 transition">Perfil</a>
+                <a href="Carrito.html" class="hover:text-yellow-300">Carrito</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Añadimos un margen superior para que el contenido no quede tapado por la barra de navegación -->
+    <section class="section mt-24">
+        <div class="container">
+            <h1 class="title">Bienvenido</h1>
+            <div id="userInfo" class="box">
+                <p>Cargando información del usuario...</p>
+            </div>
+            <button id="logoutButton" class="button is-danger">Cerrar sesión</button>
+        </div>
+
+        <!-- Submenú con estilo mejorado -->
+        <div class="submenu mx-auto" style="max-width: 600px;">
+            <h5 class="text-center">Opciones</h5>
+            <a href="si.html">Pedidos</a>
+            <a href="micuenta.html">Mi cuenta</a>
+        </div>
+    </section>
+
+    <script src="../Controladores/vistafeik.js"></script>
+</body>
+</html>

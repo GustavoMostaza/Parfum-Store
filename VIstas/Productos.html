@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de la Cafetería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../Controladores/productos.js" defer></script> <!-- Enlace al archivo JavaScript -->
+</head>
+<body class="bg-gray-100">
+
+    <!-- Barra de navegación -->
+    <nav class="bg-amber-700 text-white p-4 fixed w-full top-0 left-0 z-10 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="Inicio.html" class="text-2xl font-semibold">Le Perfumeria</a>
+            <div class="space-x-6">
+                <a href="Inicio.html" class="hover:text-yellow-300">Inicio</a>
+                <a href="Productos.html" class="hover:text-yellow-300">Menú</a>
+                <a href="registrofeik.html" class="hover:text-yellow-300">Registro</a>
+                <a href="Contacto.html" class="hover:text-yellow-300 transition">Nosotros</a>
+                <a href="vistafeik.html" class="hover:text-yellow-300 transition" >Perfil</a>
+                <a href="Carrito.html" class="hover:text-yellow-300">Carrito</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección del Menú -->
+    <section id="menu" class="py-16 bg-gray-50 mt-24">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Nuestro Menú</h2>
+
+            <!-- Selector para ordenar los productos -->
+            <div class="mb-8">
+                <label for="orderBy" class="text-lg font-semibold text-gray-700">Ordenar por:</label>
+                <select id="orderBy" class="ml-2 px-4 py-2 border border-gray-300 rounded-md">
+                    <option value="asc">Precio ascendente</option>
+                    <option value="desc">Precio descendente</option>
+                    <option value="name">Nombre</option>
+                </select>
+            </div>
+
+            <!-- Contenedor donde se insertarán los productos dinámicamente -->
+            <div id="menu-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Las tarjetas de productos se insertarán aquí dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
