@@ -5,42 +5,401 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Perfumeria - Inicio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .image-hover:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .circle-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .circle-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
 
     <!-- Barra de navegación -->
-    <nav class="bg-brown-600 text-white p-4 fixed w-full top-0 left-0 z-10 shadow-md">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-semibold">Le Perfumeria</a>
-            <div class="space-x-6">
-                <a href="Inicio.html" class="hover:text-yellow-300">Inicio</a>
-                <a href="../VIstas/Productos.html" class="hover:text-yellow-300">Menú</a>
-                <a href="registrofeik.html" class="hover:text-yellow-300">Registro</a>
-                <a href="vistafeik.html" class="hover:text-yellow-300 transition" >Perfil</a>
-                <a href="Contacto.html" class="hover:text-yellow-300 transition">Nosotros</a>
+  <!-- Barra de navegación -->
+<nav class="bg-gray-800 text-white p-4 fixed w-full top-0 left-0 z-10 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Logo o nombre de la marca -->
+        <a href="#" class="text-2xl font-semibold">Le Perfumeria</a>
 
-                <a href="Carrito.html" class="hover:text-yellow-300">Carrito</a>
+        <!-- Enlaces de navegación -->
+        <div class="flex items-center space-x-6">
+            <a href="Inicio.html" class="hover:text-yellow-300">Inicio</a>
+            <a href="../VIstas/Productos.html" class="hover:text-yellow-300">Menú</a>
+            <a href="registrofeik.html" class="hover:text-yellow-300">Registro</a>
+            <a href="vistafeik.html" class="hover:text-yellow-300 transition">Perfil</a>
+            <a href="Contacto.html" class="hover:text-yellow-300 transition">Nosotros</a>
+
+            <!-- Ícono de carrito -->
+            <a href="Carrito.html" class="hover:text-yellow-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Contenido principal -->
+    <div class="container mx-auto p-4 pt-20">
+        <header class="text-center py-4">
+            <h1 class="text-4xl font-bold">Rargatan</h1>
+            <p class="text-xl">25% 75% OFF</p>
+            <p class="text-lg">Sale</p>
+            <button class="mt-4 px-6 py-2 bg-black text-white">SHOP NOW</button>
+        </header>
+
+        <section class="my-8">
+            <h2 class="text-2xl font-bold text-center">NEW ARRIVALS!</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <div class="image-hover">
+                    <div class="circle-container">
+                        <img src="../Roots/si.jpeg" alt="Fragrances">
+                    </div>
+                    <p class="text-center mt-2">Fragrances</p>
+                </div>
+                <div class="image-hover">
+                    <div class="circle-container">
+                        <img src="https://via.placeholder.com/300" alt="Bukhoor">
+                    </div>
+                    <p class="text-center mt-2">Bukhoor</p>
+                </div>
+                <div class="image-hover">
+                    <div class="circle-container">
+                        <img src="https://via.placeholder.com/300" alt="Home Fragrances">
+                    </div>
+                    <p class="text-center mt-2">Home Fragrances</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-8">
+            <h2 class="text-2xl font-bold text-center">PERFUMES</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div class="image-hover">
+                    <div class="rectangle-container">
+                        <img src="https://www.vperfumes.com/_next/image?url=https%3A%2F%2Fmedia.vperfumes.com%2Fimages%2Fperfume-for-women-web.webp&w=1920&q=75" alt="Perfumes for Women">
+                    </div>
+                    <p class="text-center mt-2">PERFUMES for WOMEN</p>
+                </div>
+                <div class="image-hover">
+                    <div class="rectangle-container">
+                        <img src="https://www.vperfumes.com/_next/image?url=https%3A%2F%2Fmedia.vperfumes.com%2Fimages%2Fperfume-for-women-web.webp&w=1920&q=75" alt="Perfumes for Men">
+                    </div>
+                    <p class="text-center mt-2">PERFUMES FOR MEN</p>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            .image-hover:hover {
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+            }
+            .rectangle-container {
+                width: 100%;
+                height: 300px; /* Ajusta la altura según tus necesidades */
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                border-radius: 10px; /* Bordes redondeados para un look moderno */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            }
+            .rectangle-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+            }
+        </style>
+
+        <section class="my-8">
+            <h2 class="text-2xl font-bold text-center">Carrusel de Imágenes</h2>
+            <div class="relative">
+                <div id="carousel" class="carousel">
+                    <img src="https://www.vperfumes.com/_next/image?url=https%3A%2F%2Fmedia.vperfumes.com%2Fimages%2Fperfume-for-women-web.webp&w=1920&q=75" alt="Slide 1" class="w-full h-96 object-cover">
+                    <img src="https://via.placeholder.com/800x400" alt="Slide 2" class="w-full h-96 object-cover hidden">
+                    <img src="https://via.placeholder.com/800x400" alt="Slide 3" class="w-full h-96 object-cover hidden">
+                </div>
+                <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2">&#10094;</button>
+                <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2">&#10095;</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="bg-gradient-to-r from-white-600 to-indigo-600 p-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-black mb-8">Trending Fragrances</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Producto 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/300" alt="Bottega Le Essenza Absolu" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Bottega Le Essenza Absolu</h3>
+                        <p class="text-gray-600 line-through">AED 290</p>
+                        <p class="text-xl font-bold text-purple-600">AED 99</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300">Add to Cart</button>
+                    </div>
+                </div>
+    
+                <!-- Producto 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/300" alt="Bottega Le Essenza Absol" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Bottega Le Essenza Absol</h3>
+                        <p class="text-gray-600 line-through">AED 350</p>
+                        <p class="text-xl font-bold text-purple-600">AED 110</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300">Add to Cart</button>
+                    </div>
+                </div>
+    
+                <!-- Producto 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/300" alt="Azzaro The Most Wanted" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Azzaro The Most Wanted</h3>
+                        <p class="text-gray-600 line-through">AED 405</p>
+                        <p class="text-xl font-bold text-purple-600">AED 345</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300">Add to Cart</button>
+                    </div>
+                </div>
+    
+                <!-- Producto 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/300" alt="Burberry EDP For Women" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Burberry EDP For Women</h3>
+                        <p class="text-gray-600 line-through">AED 410</p>
+                        <p class="text-xl font-bold text-purple-600">AED 179</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300">Add to Cart</button>
+                    </div>
+                </div>
+    
+                <!-- Producto 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/300" alt="Burberry Weekend EDP" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Burberry Weekend EDP</h3>
+                        <p class="text-gray-600 line-through">AED 410</p>
+                        <p class="text-xl font-bold text-purple-600">AED 149</p>
+                        <button class="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300">Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <!-- Sección de inicio con video de fondo -->
-    <section id="inicio" class="flex justify-center items-center h-screen relative">
-        <!-- Video de fondo -->
-        <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop>
-            <source src="../Media/tomfor.mp4" type="video/mp4">
-            Tu navegador no soporta videos HTML5.
-        </video>
-
-        <!-- Fondo oscuro para resaltar el texto -->
-        <div class="absolute inset-0 bg-black opacity-50"></div> 
-
-        <!-- Contenido central -->
-        <div class="text-center text-white z-10">
-            <h1 class="text-5xl font-bold mb-4">Bienvenidos a Le perfumeria</h1>
-            <p class="text-xl">Disfruta de el mejor catalogo de fragancias posibles.</p>
+    <div class="bg-gray-100 p-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Sección "All Your Fragrance Needs" -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">All Your Fragrance Needs</h1>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-white text-gray-800 px-6 py-2 rounded-full shadow-md hover:bg-purple-600 hover:text-white transition-colors duration-300">TOP FAVOURITES</span>
+                    <span class="bg-white text-gray-800 px-6 py-2 rounded-full shadow-md hover:bg-purple-600 hover:text-white transition-colors duration-300">GIFT SETS</span>
+                    <span class="bg-white text-gray-800 px-6 py-2 rounded-full shadow-md hover:bg-purple-600 hover:text-white transition-colors duration-300">NICHE PERFUMES</span>
+                    <span class="bg-white text-gray-800 px-6 py-2 rounded-full shadow-md hover:bg-purple-600 hover:text-white transition-colors duration-300">MINI PERFUMES</span>
+                    <span class="bg-white text-gray-800 px-6 py-2 rounded-full shadow-md hover:bg-purple-600 hover:text-white transition-colors duration-300">HAIR MIST</span>
+                    <span class="bg-white text-gray-800 px-6 py-2 rounded-full shadow-md hover:bg-purple-600 hover:text-white transition-colors duration-300">DEODRANT SPRAY</span>
+                </div>
+            </div>
+    
+            <!-- Línea divisoria -->
+            <hr class="border-gray-300 my-8">
+    
+            <!-- Sección "Shop By Brands" -->
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Shop By Brands</h2>
+                <p class="text-gray-600 mb-8">From niche perfumes to designer brands, we have it all at the best prices in Dubai.</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <!-- Marca 1: MONT BLANC -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/150" alt="MONT BLANC" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800">MONT BLANC</p>
+                    </div>
+    
+                    <!-- Marca 2: MARK DES VINCE -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/150" alt="MARK DES VINCE" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800">MARK DES VINCE</p>
+                    </div>
+    
+                    <!-- Marca 3: LADY JE BERGER TOM -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/150" alt="LADY JE BERGER TOM" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800">LADY JE BERGER TOM</p>
+                    </div>
+    
+                    <!-- Marca 4: Jean Parth GAULTIER -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/150" alt="Jean Parth GAULTIER" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800">Jean Parth GAULTIER</p>
+                    </div>
+    
+                    <!-- Marca 5: HolyOld -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/150" alt="HolyOld" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800">HolyOld</p>
+                    </div>
+    
+                    <!-- Marca 6: F A I Z N I C H E -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/150" alt="F A I Z N I C H E" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800">F A I Z N I C H E</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="bg-gray-800 p-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-3xl font-bold text-center text-white">PERFUMES</h1>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-gray-300 hover:text-white">Follow Us: f</a>
+                <a href="#" class="text-gray-300 hover:text-white">X</a>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="border-gray-700">
+    
+    <div class="bg-gray-800 p-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold text-center text-white">About V Perfumes</h2>
+            <p class="mt-4 text-center text-gray-300">
+                Established in 2010, V Perfumes has 50 outlets throughout the UAE, including KSA, Oman, and Qatar perfume stores. We are one of Dubai’s leading perfume shops and have become known for making the luxurious experience of fragrance shopping accessible to all. <a href="#" class="text-white hover:underline">Read More</a>.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-gray-900 p-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold text-center text-white">Your Online Fragrance Destination</h2>
+            <p class="mt-4 text-center text-gray-300">
+                V Perfumes offers a wide range of fragrances online that meet all your needs. Order the perfumes you need from your favorite brands on the number 1 fragrance shopping website and have them delivered to your doorstep. Our online perfume shop is easy to use, providing you with all your fragrance needs. <a href="#" class="text-white hover:underline">Read More</a>.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-black p-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl font-bold text-center text-white">Get in touch</h2>
+            <div class="mt-4 text-center text-gray-300">
+                <p><a href="mailto:salet@perfumes.com" class="text-white hover:underline">salet@perfumes.com</a></p>
+                <p>+971-42833228</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-black p-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white">V Perfumes</h3>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Cash Back Policy</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Terms & Conditions</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">T&C (Intl Deliveries)</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 class="text-xl font-bold text-white">Support</h3>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#" class="text-gray-300 hover:text-white">Delivery Info</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Refund Policy</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Store Locator</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">FAQ</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">UAE Remote Areas</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">KSA Hold Areas</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 class="text-xl font-bold text-white">Account</h3>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#" class="text-gray-300 hover:text-white">My Bag</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 class="text-xl font-bold text-white">Download App</h3>
+                <p class="mt-4 text-gray-300">Download our app now and stay connected wherever you are. Available on the App Store and Google Play.</p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white">[Google App]</a>
+                    <a href="#" class="text-gray-300 hover:text-white">[AppStore]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#carousel img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('hidden', i !== index);
+            });
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        showSlide(currentSlide);
+    </script>
 
 </body>
 </html>
